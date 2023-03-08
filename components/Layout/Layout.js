@@ -2,9 +2,10 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useRouter } from 'next/router';
 import Footer from "../Layout/Footer";
-
+import Style from "../Layout/Layout.module.css"
 import Menu from "@mui/icons-material/Menu";
 import Close from "@mui/icons-material/Close";
+import { style } from "@mui/system";
 
 
 export function NavBar() {
@@ -15,11 +16,14 @@ export function NavBar() {
 
   return (
     <>
-      <header >
+      <header className={Style.header}>
+      <div className={Style.header_content}>
+        
         <Link href="/#LandingPage">
           {"Alexander Nerz"}
         </Link>
-  
+      
+        <div className="">
         <nav >
           <ul className={click ? "nav-options active" : "nav-options"}>
             <li onClick={closeMobileMenu}><Link href="/#About"><span>About</span></Link></li>
@@ -35,7 +39,8 @@ export function NavBar() {
             )}
           </div>
         </nav>
-
+        </div>
+            </div>
       </header>
  
     </>

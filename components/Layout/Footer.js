@@ -3,7 +3,7 @@ import Link from "next/link";
 function Footer() {
   return (
     <section>
-      <div className="footer-section flex-row-footer">
+      {/* <div className="footer-section flex-row-footer">
         <div>
           <h4>© {new Date().getFullYear()}</h4>
         </div>
@@ -22,7 +22,7 @@ function Footer() {
         <div>
           <h4>All rights reserved.</h4>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }

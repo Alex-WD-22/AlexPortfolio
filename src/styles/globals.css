@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --color-primary: white;
+  --color-secondary: #2ee728;
+  --color-light: #ffffff;
+  --color-light-opacity: #ffffff7a;
+  --color-dark: #000000;
+  --color-dark-opacity: #000000;
+  --color-light-gray: rgba(0,0,0,.7);
+  --padding-default: 36px;
+ 
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  word-wrap: normal;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.background-dark {
+  background-color: var(--color-dark);
+}
+
+.background-light {
+  background-color: var(--color-light);
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;  
+}
+
+body a {
+  text-decoration: none;
+}
+
+
+
+body button:hover {
+  color: var(--color-light-gray);
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-end {
+  justify-content: flex-end;
+}
+
+.flex-start {
+  justify-content: flex-start;
+}
+
+
+/* NAVBAR*/
+
+
+.nav-options {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: center;
+}
+
+header a {
+  padding: 20px 31px;
+  display: inline-block;
+  font-size: 18px;
+  color: var(--color-dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  transition: color .3s;
+}
+
+
+
+
+
+
+.spacer-small {
+  width: 100%;
+  height: 1.2rem;
+}
+
+.spacer-medium  {
+  width: 100%;
+  height: 2.8rem;
+}
+
+.spacer-large {
+  width: 100%;
+  height: 8rem;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+
+/* MOBILE VIEW */
+
+@media screen and (max-width: 980px) {
+
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-options.active {
+    opacity: 1;
+    transition: all 0.9s ease;
+    display: flex;
+  }
+
+  .nav-options {
+    width: 100%;
+    position: absolute;
+    top: 75px;
+    border-radius: 7px;
+    left: 0;
+    opacity: 0;
+    transition: all 0.5s ease;
+    flex-direction: column;
+    list-style: none;
+    align-content: center;
+    display: none;
+  }
+
+  header a {
+    padding: 15px;
+  }
+}

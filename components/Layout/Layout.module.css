@@ -1,0 +1,15 @@
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    text-transform: uppercase;
+    z-index: 3;
+    box-shadow: 0 10px 100px rgb(0 0 0 / 10%); 
+  }
+
+  .header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 52px;
+  }
