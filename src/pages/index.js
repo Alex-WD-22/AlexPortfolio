@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import HomeHero from 'components/HomeHero/HomeHero'
+import About from 'components/HomeHero/About/About'
 // import { Inter } from '@next/font/google'
 
 
@@ -14,7 +15,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+     
       <HomeHero />
+      <About />
     </>
   )
 }

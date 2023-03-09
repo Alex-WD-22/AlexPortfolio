@@ -1,0 +1,22 @@
+:root {
+    /* Your default theme */
+    --background: white;
+    --foreground: black;
+    --img-background: linear-gradient(
+        to right,
+        rgba(245, 245, 245, 0.616),
+        rgba(245, 245, 245, 0.616)
+      ),
+      url("/image/hexagonbg.jpg");
+  }
+  
+  [data-theme='dark'] {
+    --background: black;
+    --foreground: white;
+    --img-background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0.829),
+        rgba(0, 0, 0, 0.829)
+      ),
+      url("/image/hexagonbg.jpg");
+  }
