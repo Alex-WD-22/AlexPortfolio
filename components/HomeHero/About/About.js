@@ -31,6 +31,21 @@ function About() {
                 that matches my skills and experience then don't hesitate to
                 contact me.
               </p>
+              <div className='spacer-small'></div>
+            <p>Here are a few technologies I've been working with recently:</p>
+            <div className='spacer-small'></div>
+            <div></div>
+            <ul className='skills-list'>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Next.js</li>
+                <li>Node.js</li>
+                <li>Java</li>
+                <li>SQL</li>
+                <li>MongoDB</li>
+                <li>CSS</li>
+            </ul>
+
             </div>
     
             <div className='Img-box'>

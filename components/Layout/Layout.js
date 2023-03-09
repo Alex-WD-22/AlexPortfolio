@@ -37,7 +37,6 @@ export function NavBar({ }) {
         <nav >
           <ul className={click ? "nav-options active" : "nav-options"}>
             <li onClick={closeMobileMenu}><Link href="/#About"><span>About</span></Link></li>
-            <li onClick={closeMobileMenu}><Link href="/#Skills"><span>Skills</span></Link></li>
             <li onClick={closeMobileMenu}><Link href="/#Projects"><span>Projects</span></Link></li>
             <li onClick={closeMobileMenu}><Link href="/#Contact"><span>Contact</span></Link></li>
             <IconButton
