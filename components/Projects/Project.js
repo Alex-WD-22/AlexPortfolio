@@ -1,3 +1,6 @@
+import { ChevronRightIcon } from "@chakra-ui/icons";
+
+
 function Projects() {
   return (
     <section id="Projects">
@@ -32,9 +35,8 @@ function Projects() {
                 </div>
                 <div className="overlay">
                   <div className="text-container">
-                    <h2>Title</h2>
-                    <p>description</p>
-                    <button>buttonLabel</button>
+                    <p>Start-Up Landing Page build with Next.js</p>
+                    <button>Visit Website <ChevronRightIcon/></button>
                   </div>
                 </div>
               </div>
@@ -49,9 +51,8 @@ function Projects() {
                 </div>
                 <div className="overlay">
                   <div className="text-container">
-                    <h2>Title</h2>
-                    <p>description</p>
-                    <button>buttonLabel</button>
+                    <p>MERN Project build in React with Rest API</p>
+                    <button>Visit Website <ChevronRightIcon/></button>
                   </div>
                 </div>
               </div>
@@ -65,9 +66,8 @@ function Projects() {
                 </div>
                 <div className="overlay">
                   <div className="text-container">
-                    <h2>Title</h2>
-                    <p>description</p>
-                    <button>buttonLabel</button>
+                    <p>CRUD Project build with Express.js & Handelbars.js</p>
+                    <button>Visit Website <ChevronRightIcon/></button>
                   </div>
                 </div>
               </div>
@@ -81,9 +81,9 @@ function Projects() {
                 </div>
                 <div className="overlay">
                   <div className="text-container">
-                    <h2>Title</h2>
-                    <p>description</p>
-                    <button>buttonLabel</button>
+                    
+                    <p>OOP Project build with JavaScript, HTML and CSS</p>
+                    <button>Visit Website <ChevronRightIcon/></button>
                   </div>
                 </div>
               </div>

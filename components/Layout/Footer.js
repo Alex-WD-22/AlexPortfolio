@@ -9,12 +9,12 @@ function Footer() {
       <div className="footer-section">
         <div className="flex-row space-between">
           <div>
-          <h1>Alexander Nerz</h1>
+          <h5>Alexander Nerz</h5>
           <div className="spacer-small"></div>
           <p>I love innovative, fast-paced, multidisciplinary teams.</p>
         </div>
         <div>
-          <h1>Social</h1>
+          <h5>Social</h5>
           <div className="spacer-small"></div>
           <span className="social-links">
           <a href="https://github.com/Alex-WD-22" target="_blank" rel="noopener noreferrer"><GitHub sx={{ fontSize: 30 }}/></a>
