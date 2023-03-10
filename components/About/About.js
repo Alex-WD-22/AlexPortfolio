@@ -55,7 +55,7 @@ function About() {
                 width={250}
                 height={250}
                 />
-        
+                
             </div>
           </div>
         </div>

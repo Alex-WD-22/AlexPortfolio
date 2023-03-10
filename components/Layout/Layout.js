@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useContext, useEffect, useState } from "react";
+import { useState } from "react";
 import Footer from "../Layout/Footer";
 import Style from "../Layout/Layout.module.css"
 import Menu from "@mui/icons-material/Menu";
@@ -7,7 +7,6 @@ import Close from "@mui/icons-material/Close";
 import { useTheme } from "next-themes";
 import Brightness3Icon from '@mui/icons-material/Brightness3';
 import LightModeIcon from '@mui/icons-material/LightMode';
-import Button from '@mui/material/Button';
 import { IconButton } from "@mui/material";
 
 
@@ -29,7 +28,7 @@ export function NavBar({ }) {
       <header className={Style.header}>
       <div className={Style.header_content}>
         
-        <Link href="/#LandingPage">
+        <Link href="#">
           {"Alexander Nerz"}
         </Link>
       

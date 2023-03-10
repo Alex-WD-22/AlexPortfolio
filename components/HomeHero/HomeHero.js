@@ -1,4 +1,5 @@
-import { Button } from "@mui/material";
+import { Button } from "@chakra-ui/react";
+import Link from 'next/link';
 
 function HomeHero () {
 
@@ -14,9 +15,11 @@ function HomeHero () {
                     <p> I love innovative, fast-paced, multidisciplinary teams.</p>
                     <div className="spacer-medium"></div>
                     <div>
-                        <Button>
+                       <Link  href="#Projects">
+                       <Button>
                             Projects
                         </Button>
+                       </Link>
                     </div>
                 </div>
             </div>

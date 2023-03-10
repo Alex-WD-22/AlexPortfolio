@@ -23,11 +23,13 @@ function Contact() {
   };
 
   return (
-    <section id="Contact">
+    <section id="Contact" className="border-bottom">
       <div className="main-Container">
         <div className="section-Content About-Section">
           <div className="flex-center">
             <h4>Get in Touch</h4>
+            <div className="spacer-small"></div>
+            <span className="design-heading"></span>
             <div className="spacer-medium"></div>
             <p>
               my inbox is always open. Whether you have a question or just want

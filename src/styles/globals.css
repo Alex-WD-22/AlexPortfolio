@@ -19,6 +19,10 @@
   word-wrap: normal;
 }
 
+a { 
+  color: inherit; 
+} 
+
 body h1 {
   font-size: 16px;
 }
@@ -37,6 +41,10 @@ body h4 {
 
 body h5 {
   font-size: clamp(20px, 8vw, 30px);
+}
+
+body h6 {
+  font-size: clamp(10px, 8vw, 15px);
 }
 
 p {
@@ -68,12 +76,29 @@ body {
   scrollbar-width: none;
 }
 
+body Button {
+  background-color: var(--background);
+  color: var(--foreground);
+  padding: 15px 83px;
+  display: flex;
+  border-radius: 7px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid rgba(31, 31, 206, 0.836);
+  position: relative;
+  transition: all 0.3s ease-out;
+}
+
+
 body a {
   text-decoration: none;
 }
 
 body button:hover {
-  color: var(--color-light-gray);
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in;
 }
 
 .spacer-small {
@@ -144,7 +169,7 @@ body button:hover {
 .design-heading {
   height: 5px;
   width: 3rem;
-  background: #facf0f;
+  background: rgba(31, 31, 206, 0.836);
   left: 50%;
   border-radius: 5px;
 }
@@ -168,6 +193,8 @@ body button:hover {
   justify-content: center;
   align-items: center;
 }
+
+
 
 .skills-list {
     display: grid;
@@ -273,7 +300,11 @@ body button:hover {
     margin: 0px 150px;
 }
 
-
+.social-links {
+  display: flex;
+  gap: 10px;
+  
+}
 
 
 @media screen and (max-width: 770px) {

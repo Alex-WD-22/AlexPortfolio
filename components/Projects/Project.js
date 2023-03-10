@@ -6,6 +6,8 @@ function Projects() {
           <div className="flex-center">
             <h4>MY PROJECTS</h4>
             <div className="spacer-small"></div>
+            <span className="design-heading"></span>
+            <div className="spacer-medium"></div>
             <p>
               Here are my projects I've worked on. Do you have questions?
               <a

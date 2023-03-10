@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import HomeHero from 'components/HomeHero/HomeHero'
-import About from 'components/HomeHero/About/About'
+import About from 'components/About/About'
 import Projects from 'components/Projects/Project'
 import Contact from 'components/Contact/Contact'
 
