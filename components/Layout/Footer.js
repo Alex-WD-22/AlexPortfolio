@@ -3,28 +3,28 @@ import Link from "next/link";
 function Footer() {
   return (
     <section>
-      {/* <div className="footer-section flex-row-footer">
-        <div>
-          <h4>© {new Date().getFullYear()}</h4>
-        </div>
-        <div className="flex-row-footer flex-row">
+    <div className="main-Container">
+      <div className="footer-section">
+        <div className="flex-row space-between">
           <div>
-            <h4>
-              <Link href="/impressum">Impressum</Link>{" "}
-            </h4>
-          </div>
-          <div>
-            <h4>
-              <Link href="/Datenschutzerklaerung">Datenschutzerklärung</Link>
-            </h4>
-          </div>
+          <h1>Alexander Nerz</h1>
         </div>
         <div>
-          <h4>All rights reserved.</h4>
+          <h1>Socials</h1>
         </div>
-      </div> */}
+        </div>
+        <div className="spacer-large border-bottom"></div>
+        <div className="spacer-medium"></div>
+        <div className="flex-center">
+        <p>© {new Date().getFullYear()}. Made by Alexander Nerz</p>
+       
+        </div>
+      </div>
+      </div>
     </section>
   );
 }
 
 export default Footer;
+
+
