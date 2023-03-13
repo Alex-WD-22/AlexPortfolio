@@ -23,8 +23,8 @@ function Footer() {
           </span>
         </div>
         </div>
-        <div className="spacer-medium border-bottom"></div>
-        <div className="spacer-medium"></div>
+        <div className="spacer-small border-bottom"></div>
+        <div className="spacer-small"></div>
         <div className="flex-center">
         <h6>© {new Date().getFullYear()}. Made by <a className="border-bottom" href="https://anerz.com">Alexander Nerz</a></h6>
        

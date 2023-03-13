@@ -1,6 +1,7 @@
 import {
   Button,
   useDisclosure,
+  FormControl,
   Drawer,
   DrawerOverlay,
   DrawerContent,
@@ -10,20 +11,65 @@ import {
   DrawerFooter,
 } from "@chakra-ui/react";
 import { useForm } from "react-hook-form";
-import TextField from "@mui/material/TextField";
-
 import styles from "./Contact.module.css";
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
+import { toast, ToastContainer, Box } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Input, FormLabel, Textarea, CSSReset, Stack } from "@chakra-ui/react";
+
 function Contact() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const { register, handleSubmit, reset } = useForm();
+  const { register, handleSubmit } = useForm({});
 
-  const onSubmit = (data) => {
-    console.log(data);
-    reset();
+  const onSubmit = (data, e) => {
+    e.preventDefault();
+    sendEmail(data);
   };
+
+  const notify = () => {
+    toast.success("Message sent successfully!", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
+
+  const sendEmail = (formData) => {
+    toast
+      .promise(
+        emailjs.send(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+          formData,
+          process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        ),
+        {
+          pending: "Sending...",
+          success: "Message sent successfully!",
+          error: "Something went wrong. Please try again later",
+        }
+      )
+      .then((result) => {
+        setName("");
+        setEmail("");
+        setMessage("");
+        onClose();
+      });
+  };
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   return (
     <section id="Contact" className="border-bottom">
+      <ToastContainer position="top-center" />
+
       <div className="main-Container">
         <div className="section-Content About-Section">
           <div className="flex-center">
@@ -37,8 +83,7 @@ function Contact() {
             </p>
             <div className="spacer-large"></div>
             <Button onClick={onOpen}>Contact</Button>
-
-            <Drawer onClose={onClose} isOpen={isOpen} size="xs">
+            <Drawer onClose={onClose} isOpen={isOpen} size="xs" color="black">
               <DrawerOverlay />
               <DrawerContent className={styles.drawerContent}>
                 <DrawerCloseButton
@@ -48,51 +93,98 @@ function Contact() {
                   zIndex={2}
                 />
                 <DrawerHeader className="flex-center">
-                  <h1>Contact Form</h1>
+                  <h4>Say Hello!</h4>
+                  <div className="spacer-small"></div>
                 </DrawerHeader>
                 <DrawerBody className={styles.drawerBody}>
-                  <div className="">
-                    <div className="">
-                      <form onSubmit={handleSubmit(onSubmit)} id='contact-form'
-                      >
-                        <TextField
-                          label="Name"
-                          name="name"
-                          margin="normal"
-                          
-                        />
-                        <TextField
-                          label="Email"
-                          name="email"
-                          margin="normal"
-                          
-                        />
-                      </form>
-                    </div>
-                    <div className="spacer-small"></div>
-                    <form onSubmit={handleSubmit(onSubmit)} id='contact-form'>
-                      <TextField
-                        label="Message"
-                        name="message"
-                        margin="normal"
-                        fullWidth
-                        multiline
-                        rows={4}
-                      />
+                  {isOpen && (
+                    <form id="contact-form" onSubmit={handleSubmit(onSubmit)}>
+                      <div className="flex-contact">
+                        <div>
+                          <Stack direction="row" spacing={15}>
+                            <FormControl isRequired>
+                              <FormLabel>Name</FormLabel>
+                              <Input
+                                placeholder="Name"
+                                size="lg"
+                                label="Name"
+                                required
+                                name="name"
+                                type="text"
+                                fontSize="19px"
+                                onChange={(e) => setName(e.target.value)}
+                                {...register("name")}
+                                defaultValue={name}
+                                px={10}
+                                py={10}
+                                className="my-custom-input"
+                              />
+                            </FormControl>
+                            <FormControl isRequired>
+                              <FormLabel>E-Mail</FormLabel>
+
+                              <Input
+                                fontSize="19px"
+                                size="lg"
+                                Variant="Filled"
+                                placeholder="Email"
+                                label="Email"
+                                required
+                                name="email"
+                                type="email"
+                                onChange={(e) => setEmail(e.target.value)}
+                                {...register("email")}
+                                defaultValue={email}
+                                px={10}
+                                py={10}
+                                className="my-custom-input"
+                              />
+                            </FormControl>
+                          </Stack>
+                          <div className="spacer-small"></div>
+                          <div className="flex-center contact-message">
+                            <FormControl isRequired>
+                              <FormLabel>Message</FormLabel>
+
+                              <Textarea
+                                fontSize="19px"
+                                size="xs"
+                                variant="flushed"
+                                placeholder="Message"
+                                label="Message"
+                                type="text"
+                                name="message"
+                                required
+                                maxLength="100"
+                                rows={6}
+                                resize="none"
+                                onChange={(e) => setMessage(e.target.value)}
+                                {...register("message")}
+                                defaultValue={message}
+                                px={10}
+                                py={10}
+                                style={{ width: "220%" }}
+                                className="my-custom-input"
+                              />
+                            </FormControl>
+                          </div>
+                          <div className="spacer-small"></div>
+                          <div className="flex-center">
+                            <Button
+                              type="submit"
+                              variant="contained"
+                              color="primary"
+                              form="contact-form"
+                            >
+                              Send
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
                     </form>
-                  </div>
+                  )}
                 </DrawerBody>
-                <DrawerFooter className={styles.drawerFooter}>
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    color="primary"
-                    form='contact-form'
-                    // endIcon={<SendIcon />}
-                  >
-                    Send
-                  </Button>
-                </DrawerFooter>
+                <DrawerFooter className={styles.drawerFooter}></DrawerFooter>
               </DrawerContent>
             </Drawer>
           </div>
@@ -101,5 +193,4 @@ function Contact() {
     </section>
   );
 }
-
 export default Contact;
