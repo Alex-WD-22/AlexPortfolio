@@ -12,13 +12,20 @@
     background-color: var(--background);
     padding: 20px;
     border: 1px solid red;
+    display: flex;
+}
+
+.CloseButton {
+    width: 10px;
+    padding: 5px 15px;
+    margin-left: auto;
 }
 
 .drawerBody {
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
+    align-items: flex-start; */
+    
 }
 
 .drawerBody p {

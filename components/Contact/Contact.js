@@ -42,6 +42,7 @@ function Contact() {
               <DrawerOverlay />
               <DrawerContent className={styles.drawerContent}>
                 <DrawerCloseButton
+                  className={styles.CloseButton}
                   backgroundColor="initial"
                   color="#ccc"
                   zIndex={2}
@@ -50,21 +51,21 @@ function Contact() {
                   <h1>Contact Form</h1>
                 </DrawerHeader>
                 <DrawerBody className={styles.drawerBody}>
-                  <div className="flex-center">
-                    <div className="flex-row">
+                  <div className="">
+                    <div className="">
                       <form onSubmit={handleSubmit(onSubmit)} id='contact-form'
                       >
                         <TextField
                           label="Name"
                           name="name"
                           margin="normal"
-                          fullWidth
+                          
                         />
                         <TextField
                           label="Email"
                           name="email"
                           margin="normal"
-                          fullWidth
+                          
                         />
                       </form>
                     </div>
