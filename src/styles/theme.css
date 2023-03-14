@@ -1,7 +1,7 @@
 :root {
     /* Your default theme */
     --background: white;
-    --foreground: black;
+    --foreground: #000;
     --img-background: linear-gradient(
         to right,
         rgba(245, 245, 245, 0.616),
@@ -11,7 +11,7 @@
   }
   
   [data-theme='dark'] {
-    --background: black;
+    --background: #202123;
     --foreground: white;
     --img-background: linear-gradient(
         to right,

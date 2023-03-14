@@ -8,7 +8,7 @@ import { useTheme } from "next-themes";
 import Brightness3Icon from '@mui/icons-material/Brightness3';
 import LightModeIcon from '@mui/icons-material/LightMode';
 import { IconButton } from "@mui/material";
-
+import { MoonIcon, SunIcon,  } from '@chakra-ui/icons'
 
 export function NavBar({ }) {
   const [click, setClick] = useState(false);
@@ -43,7 +43,7 @@ export function NavBar({ }) {
                 onClick={handleToggleTheme}
                 color={isLightMode ? 'inherit' : 'secondary'}
                     >
-            {isLightMode ? <Brightness3Icon /> : <LightModeIcon style={{ color: 'white' }} />}
+            {isLightMode ? <MoonIcon /> : <SunIcon style={{ color: 'white' }} />}
             </IconButton>
           </ul>
           <div className="mobile-menu" onClick={handleClick}>
