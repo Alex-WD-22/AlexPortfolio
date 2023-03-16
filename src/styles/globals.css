@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
 :root {
   --color-primary: white;
@@ -11,7 +11,6 @@
   --padding-default: 36px;
 }
 
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,20 +18,28 @@
   word-wrap: normal;
 }
 
-a { 
-  color: inherit; 
-} 
+a {
+  color: inherit;
+}
 
 body h1 {
   font-size: clamp(8px, 8vw, 16px);
+  color: rgba(31, 31, 206, 0.836);
+  font-weight: bolder;
+  font-size: 18px;
+  
 }
 
 body h2 {
   font-size: clamp(40px, 8vw, 80px);
+  font-weight: 900;
+  line-height: 1.1;
 }
 
 body h3 {
   font-size: clamp(40px, 8vw, 80px);
+  font-weight: 900;
+  line-height: 1.1;
 }
 
 body h4 {
@@ -48,7 +55,7 @@ body h6 {
 }
 
 p {
-  font-size: 19px;
+  font-size: 20px;
 }
 
 body::-webkit-scrollbar {
@@ -60,7 +67,7 @@ html {
 }
 
 html body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .background-dark {
@@ -153,7 +160,7 @@ body button:hover {
 }
 
 .theme-bg {
-  background:var(--background);
+  background: var(--background);
 }
 .theme-bg-top {
   background: var(--theme-bg-top);
@@ -174,7 +181,7 @@ body button:hover {
   padding: 0.3rem;
 }
 
-.HeroSocial  {
+.HeroSocial {
   padding: 10.4px;
 }
 
@@ -217,12 +224,12 @@ body button:hover {
 }
 
 .skills-list {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(140px, 200px));
-    gap: 1px 10px;
-    padding: 0px;
-    overflow: hidden;
-    list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  gap: 1px 10px;
+  padding: 0px;
+  overflow: hidden;
+  list-style: none;
 }
 
 .skills-list li:before {
@@ -231,9 +238,9 @@ body button:hover {
 }
 
 .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px 80px;
 }
 
 .project-container {
@@ -256,7 +263,6 @@ body button:hover {
   transition: transform 0.5s ease;
 }
 
-
 .image-container::before {
   content: attr(data-title);
   position: absolute;
@@ -274,7 +280,7 @@ body button:hover {
 }
 
 .overlay {
-  position:absolute;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -294,9 +300,13 @@ body button:hover {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #000;
+  color: var(--foreground);
   font-weight: 900;
-  font-size: 29px;
+  text-shadow: 1px 1px 0px #fff;
+}
+
+.text-container p {
+  font-size: 25px !important;
 }
 
 .text-container h2 {
@@ -309,25 +319,19 @@ body button:hover {
   margin-bottom: 2rem;
 }
 
-
-
 .footer-section {
-    padding: 30px 0px 20px 0px;
-    margin: 0px 150px;
+  padding: 30px 0px 20px 0px;
+  margin: 0px 150px;
 }
 
 .social-links {
   display: flex;
   gap: 10px;
-  
 }
 
 .border-top {
   border-top: 1px solid rgba(128, 128, 128, 0.603);
 }
-
-
-
 
 /* NAVBAR*/
 
@@ -347,7 +351,6 @@ header a {
   letter-spacing: 1px;
   font-weight: 700;
   transition: color 0.3s;
-
 }
 
 .mobile-menu {
@@ -362,10 +365,12 @@ header a {
   }
   .grid-container {
     gap: 10px 10px;
+  }
+  .heroContent p{
+    margin-bottom: 10px;
+    padding: 10px;
+  }
 }
-}
-
-
 
 @media screen and (max-width: 980px) {
   .mobile-menu {
@@ -376,8 +381,7 @@ header a {
   .grid-container {
     grid-template-columns: 1fr;
     gap: 11px;
-    
-}
+  }
 
   .nav-options.active {
     opacity: 1;
@@ -386,9 +390,10 @@ header a {
   }
 
   .nav-options {
+    padding: 18px;
     width: 100%;
     position: absolute;
-    top: 75px;
+    top: 70px;
     border-radius: 7px;
     left: 0;
     opacity: 0;
@@ -408,7 +413,7 @@ header a {
     margin: 0px;
     padding: 0px;
   }
-  
+
   .section-Content {
     margin: 0px;
     padding: 124px 15px;
@@ -418,24 +423,22 @@ header a {
     flex-direction: column;
   }
 
-  .HomeHero-socials{
+  .HomeHero-socials {
     display: none;
   }
-
 }
 
 @media screen and (max-width: 770px) {
   .grid-container {
-      grid-template-columns: 1fr;
-      gap: 11px;
-      
+    grid-template-columns: 1fr;
+    gap: 11px;
   }
   .grid-container a {
-      height: 62vw;
+    height: 62vw;
   }
   .grid-container a:hover > small {
-      display: none !important;
-  }   
+    display: none !important;
+  }
   .main-Container {
     margin: 0px;
     padding: 0px;
@@ -444,17 +447,8 @@ header a {
     padding: 60px 0px 20px 0px;
     margin: 0px 10px;
     align-content: center;
-}
-.project-container {
-  
-}
-
-.About-Section {
-  
-}
-.mobile-card {
-  
   }
+
   .image-container {
     width: 350px;
   }
