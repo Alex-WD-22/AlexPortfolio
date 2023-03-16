@@ -1,13 +1,11 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect  } from "react";
 import Footer from "../Layout/Footer";
 import Style from "../Layout/Layout.module.css"
 import Menu from "@mui/icons-material/Menu";
 import Close from "@mui/icons-material/Close";
 import { useTheme } from "next-themes";
-import Brightness3Icon from '@mui/icons-material/Brightness3';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import { IconButton } from "@mui/material";
+import { IconButton } from '@chakra-ui/react'
 import { MoonIcon, SunIcon,  } from '@chakra-ui/icons'
 
 export function NavBar({ }) {
@@ -16,10 +14,23 @@ export function NavBar({ }) {
   const closeMobileMenu = () => setClick(false);
 
   const { theme, setTheme } = useTheme();
-  const isLightMode = theme === 'light';
+  const [isLightMode, setIsLightMode] = useState(true);
+  
+
+  useEffect(() => {
+    if (theme === 'light') {
+      setIsLightMode(true);
+    } else {
+      setIsLightMode(false);
+    }
+  }, [theme]);
   
   function handleToggleTheme() {
-    setTheme(theme === 'light' ? 'dark' : 'light');
+    if (isLightMode) {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
   }
 
  
@@ -43,7 +54,11 @@ export function NavBar({ }) {
                 onClick={handleToggleTheme}
                 color={isLightMode ? 'inherit' : 'secondary'}
                     >
-            {isLightMode ? <MoonIcon /> : <SunIcon style={{ color: 'white' }} />}
+            {isLightMode ? (
+  <MoonIcon key="moon-icon" />
+) : (
+  <SunIcon key="sun-icon"  />
+)}
             </IconButton>
           </ul>
           <div className="mobile-menu" onClick={handleClick}>

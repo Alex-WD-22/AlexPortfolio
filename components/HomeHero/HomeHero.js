@@ -4,6 +4,8 @@ import { GitHub, LinkedIn, LocalPostOffice } from "@mui/icons-material";
 
 function HomeHero () {
 
+ 
+
     return (
         <section id="Home" className="HomeHero">
         <div className="HomeHero-socials">
@@ -21,8 +23,15 @@ function HomeHero () {
                     <p> I love innovative, fast-paced, multidisciplinary teams.</p>
                     <div className="spacer-medium"></div>
                     <div>
-                       <Link  href="#Projects">
-                       <Button>
+                       <Link href="#Projects">
+                       <Button
+                        size='md'
+                        height='62px'
+                        width='290px'
+                        border='2px'
+                        fontSize='20px'
+                        borderColor='rgba(31, 31, 206, 0.836)'
+                       >
                             Projects
                         </Button>
                        </Link>

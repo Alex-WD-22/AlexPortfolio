@@ -1,5 +1,5 @@
 import { ChevronRightIcon } from "@chakra-ui/icons";
-
+import { Button} from '@chakra-ui/react'
 
 function Projects() {
   return (
@@ -36,7 +36,7 @@ function Projects() {
                 <div className="overlay">
                   <div className="text-container">
                     <p>Start-Up Landing Page build with Next.js</p>
-                    <button>Visit Website <ChevronRightIcon/></button>
+                    <Button rightIcon={<ChevronRightIcon />}>Visit Website </Button>
                   </div>
                 </div>
               </div>
@@ -52,7 +52,7 @@ function Projects() {
                 <div className="overlay">
                   <div className="text-container">
                     <p>MERN Project build in React with Rest API</p>
-                    <button>Visit Website <ChevronRightIcon/></button>
+                    <Button rightIcon={<ChevronRightIcon />}>Visit Website </Button>
                   </div>
                 </div>
               </div>
@@ -67,7 +67,7 @@ function Projects() {
                 <div className="overlay">
                   <div className="text-container">
                     <p>CRUD Project build with Express.js & Handelbars.js</p>
-                    <button>Visit Website <ChevronRightIcon/></button>
+                    <Button rightIcon={<ChevronRightIcon />}>Visit Website </Button>
                   </div>
                 </div>
               </div>
@@ -83,7 +83,7 @@ function Projects() {
                   <div className="text-container">
                     
                     <p>OOP Project build with JavaScript, HTML and CSS</p>
-                    <button>Visit Website <ChevronRightIcon/></button>
+                    <Button rightIcon={<ChevronRightIcon />}>Visit Website </Button>
                   </div>
                 </div>
               </div>

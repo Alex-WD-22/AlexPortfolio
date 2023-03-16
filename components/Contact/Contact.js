@@ -82,7 +82,14 @@ function Contact() {
               to say hi, I'll try my best to get back to you!
             </p>
             <div className="spacer-large"></div>
-            <Button onClick={onOpen}>Contact</Button>
+            <Button 
+                       size='md'
+                        height='62px'
+                        width='290px'
+                        border='2px'
+                        fontSize='20px'
+                        borderColor='rgba(31, 31, 206, 0.836)'
+            onClick={onOpen}>Contact</Button>
             <Drawer onClose={onClose} isOpen={isOpen} size="xs" color="black">
               <DrawerOverlay />
               <DrawerContent className={styles.drawerContent}>
@@ -115,9 +122,8 @@ function Contact() {
                                 onChange={(e) => setName(e.target.value)}
                                 {...register("name")}
                                 defaultValue={name}
-                                px={10}
-                                py={10}
-                                className="my-custom-input"
+                                
+                                
                               />
                             </FormControl>
                             <FormControl isRequired>
@@ -135,36 +141,30 @@ function Contact() {
                                 onChange={(e) => setEmail(e.target.value)}
                                 {...register("email")}
                                 defaultValue={email}
-                                px={10}
-                                py={10}
-                                className="my-custom-input"
+                        
                               />
                             </FormControl>
                           </Stack>
                           <div className="spacer-small"></div>
-                          <div className="flex-center contact-message">
+                          <div className="flex-center ">
                             <FormControl isRequired>
                               <FormLabel>Message</FormLabel>
 
                               <Textarea
                                 fontSize="19px"
                                 size="xs"
-                                variant="flushed"
+                                variant='outline'
                                 placeholder="Message"
                                 label="Message"
                                 type="text"
                                 name="message"
                                 required
-                                maxLength="100"
+                                maxLength="325"
                                 rows={6}
                                 resize="none"
                                 onChange={(e) => setMessage(e.target.value)}
                                 {...register("message")}
                                 defaultValue={message}
-                                px={10}
-                                py={10}
-                                style={{ width: "220%" }}
-                                className="my-custom-input"
                               />
                             </FormControl>
                           </div>
@@ -175,6 +175,13 @@ function Contact() {
                               variant="contained"
                               color="primary"
                               form="contact-form"
+                              size='md'
+                        height='62px'
+                        width='290px'
+                        border='2px'
+                        fontSize='20px'
+                        borderColor='rgba(31, 31, 206, 0.836)'
+                        
                             >
                               Send
                             </Button>
