@@ -1,8 +1,8 @@
 import Image from 'next/image';
-
+import styles from "./About.module.css"
 function About() {
   return (
-    <section id="About">
+    <section id="About" className="theme-bg-top">
       <div className="main-Container">
         <div className="section-Content About-Section">
           <div className="flex-center">
@@ -48,14 +48,16 @@ function About() {
 
             </div>
     
-            <div className='Img-box'>
+            <div className={styles.Imgbox}>
+            <div className={styles.imgWrapper}>
                 <Image 
                 src="/image/alexanderNerzProfile.jpg"
                 alt="Alexander Nerz Profile Picture"
                 width={250}
                 height={250}
+                className={styles.meImg}
                 />
-                
+                </div>
             </div>
           </div>
         </div>

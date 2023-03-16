@@ -3,10 +3,10 @@ import { Button} from '@chakra-ui/react'
 
 function Projects() {
   return (
-    <section id="Projects">
+    <section id="Projects" className="theme-bg-bottom">
       <div className="main-Container">
         <div className="section-Content About-Section">
-          <div className="flex-center">
+          <div className="flex-center mobile-card">
             <h4>MY PROJECTS</h4>
             <div className="spacer-small"></div>
             <span className="design-heading"></span>

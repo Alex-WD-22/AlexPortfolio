@@ -4,10 +4,10 @@ import { GitHub, LinkedIn, LocalPostOffice } from "@mui/icons-material";
 
 function Footer() {
   return (
-    <section>
+    <section className="border-top theme-bg">
     <div className="main-Container">
       <div className="footer-section">
-        <div className="flex-row space-between">
+        <div className="flex-row space-between flex-wrap">
           <div>
           <h5>Alexander Nerz</h5>
           <div className="spacer-small"></div>

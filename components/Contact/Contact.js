@@ -67,7 +67,7 @@ function Contact() {
   const [message, setMessage] = useState("");
 
   return (
-    <section id="Contact" className="border-bottom">
+    <section id="Contact" className="Contact-bg">
       <ToastContainer position="top-center" />
 
       <div className="main-Container">
