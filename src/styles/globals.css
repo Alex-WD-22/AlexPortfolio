@@ -48,6 +48,7 @@ body h4 {
 
 body h5 {
   font-size: clamp(20px, 8vw, 30px);
+  font-weight: 700;
 }
 
 body h6 {
@@ -55,7 +56,8 @@ body h6 {
 }
 
 p {
-  font-size: 20px;
+  font-size: 21px;
+  color: var(--p-header);
 }
 
 body::-webkit-scrollbar {
@@ -117,6 +119,10 @@ body button:hover {
 .flex-row {
   display: flex;
   flex-direction: row;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 .flex-space-between {
@@ -221,6 +227,16 @@ body button:hover {
 
 .text-box {
   flex: 1;
+  line-height: 1.7;
+}
+
+.text-box a {
+  font-weight:bolder;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+.text-box p {
+  color: var(--p-color);
 }
 
 .skills-list {
@@ -230,6 +246,7 @@ body button:hover {
   padding: 0px;
   overflow: hidden;
   list-style: none;
+  
 }
 
 .skills-list li:before {
@@ -307,6 +324,7 @@ body button:hover {
 
 .text-container p {
   font-size: 25px !important;
+  color: var(--p-card);
 }
 
 .text-container h2 {

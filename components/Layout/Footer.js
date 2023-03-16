@@ -47,7 +47,7 @@ function Footer() {
           <div className="flex-center">
             <h6>
               © {new Date().getFullYear()}. Made by{" "}
-              <a className="border-bottom" href="https://anerz.com">
+              <a className="underline" href="https://anerz.com">
                 Alexander Nerz
               </a>
             </h6>
