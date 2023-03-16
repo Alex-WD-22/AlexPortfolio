@@ -122,13 +122,10 @@ function Contact() {
                                 onChange={(e) => setName(e.target.value)}
                                 {...register("name")}
                                 defaultValue={name}
-                                
-                                
                               />
                             </FormControl>
                             <FormControl isRequired>
                               <FormLabel>E-Mail</FormLabel>
-
                               <Input
                                 fontSize="19px"
                                 size="lg"
@@ -141,7 +138,6 @@ function Contact() {
                                 onChange={(e) => setEmail(e.target.value)}
                                 {...register("email")}
                                 defaultValue={email}
-                        
                               />
                             </FormControl>
                           </Stack>
@@ -149,7 +145,6 @@ function Contact() {
                           <div className="flex-center ">
                             <FormControl isRequired>
                               <FormLabel>Message</FormLabel>
-
                               <Textarea
                                 fontSize="19px"
                                 size="xs"
@@ -181,9 +176,8 @@ function Contact() {
                         border='2px'
                         fontSize='20px'
                         borderColor='rgba(31, 31, 206, 0.836)'
-                        
                             >
-                              Send
+                            Send
                             </Button>
                           </div>
                         </div>

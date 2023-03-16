@@ -334,7 +334,7 @@ body button:hover {
 
 .text-container p {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 }
 
 .footer-section {
@@ -444,6 +444,11 @@ header a {
   .HomeHero-socials {
     display: none;
   }
+
+  .text-container p {
+    font-size: 18px !important;
+  }
+
 }
 
 @media screen and (max-width: 770px) {
@@ -451,9 +456,7 @@ header a {
     grid-template-columns: 1fr;
     gap: 11px;
   }
-  .grid-container a {
-    height: 62vw;
-  }
+ 
   .grid-container a:hover > small {
     display: none !important;
   }

@@ -67,4 +67,8 @@
     .blogCard img {
         width: 100%;
     }
+    .drawerContent {
+        max-width: 98%;
+        padding: 0px;
+    }
 }
