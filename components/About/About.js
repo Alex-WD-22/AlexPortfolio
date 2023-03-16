@@ -12,7 +12,7 @@ function About() {
             <span className="design-heading"></span>
             <div className="spacer-medium"></div>
             <p>My Programming Skills, short History about me</p>
-            <div className="spacer-large"></div>
+            <div className="spacer-medium"></div>
           </div>
 
           <div className="flex-wrap">

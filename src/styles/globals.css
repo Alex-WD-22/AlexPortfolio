@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 
 :root {
   --color-primary: white;
@@ -27,7 +27,6 @@ body h1 {
   color: rgba(31, 31, 206, 0.836);
   font-weight: bolder;
   font-size: 18px;
-  
 }
 
 body h2 {
@@ -69,7 +68,7 @@ html {
 }
 
 html body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .background-dark {
@@ -231,7 +230,7 @@ body button:hover {
 }
 
 .text-box a {
-  font-weight:bolder;
+  font-weight: bolder;
   text-decoration: underline;
   text-decoration-color: black;
 }
@@ -246,7 +245,6 @@ body button:hover {
   padding: 0px;
   overflow: hidden;
   list-style: none;
-  
 }
 
 .skills-list li:before {
@@ -375,6 +373,10 @@ header a {
   display: none;
 }
 
+.project-email span {
+  text-decoration: underline;
+}
+
 /* MOBILE VIEW */
 @media screen and (max-width: 1300px) {
   .section-Content {
@@ -384,7 +386,7 @@ header a {
   .grid-container {
     gap: 10px 10px;
   }
-  .heroContent p{
+  .heroContent p {
     margin-bottom: 10px;
     padding: 10px;
   }
@@ -448,7 +450,6 @@ header a {
   .text-container p {
     font-size: 18px !important;
   }
-
 }
 
 @media screen and (max-width: 770px) {
@@ -456,7 +457,7 @@ header a {
     grid-template-columns: 1fr;
     gap: 11px;
   }
- 
+
   .grid-container a:hover > small {
     display: none !important;
   }

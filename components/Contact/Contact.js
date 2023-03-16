@@ -78,18 +78,21 @@ function Contact() {
             <span className="design-heading"></span>
             <div className="spacer-medium"></div>
             <p>
-              my inbox is always open. Whether you have a question or just want
+              My inbox is always open. Whether you have a question or just want
               to say hi, I'll try my best to get back to you!
             </p>
             <div className="spacer-large"></div>
-            <Button 
-                       size='md'
-                        height='62px'
-                        width='290px'
-                        border='2px'
-                        fontSize='20px'
-                        borderColor='rgba(31, 31, 206, 0.836)'
-            onClick={onOpen}>Contact</Button>
+            <Button
+              size="md"
+              height="62px"
+              width="290px"
+              border="2px"
+              fontSize="20px"
+              borderColor="rgba(31, 31, 206, 0.836)"
+              onClick={onOpen}
+            >
+              Contact
+            </Button>
             <Drawer onClose={onClose} isOpen={isOpen} size="xs" color="black">
               <DrawerOverlay />
               <DrawerContent className={styles.drawerContent}>
@@ -148,7 +151,7 @@ function Contact() {
                               <Textarea
                                 fontSize="19px"
                                 size="xs"
-                                variant='outline'
+                                variant="outline"
                                 placeholder="Message"
                                 label="Message"
                                 type="text"
@@ -170,14 +173,14 @@ function Contact() {
                               variant="contained"
                               color="primary"
                               form="contact-form"
-                              size='md'
-                        height='62px'
-                        width='290px'
-                        border='2px'
-                        fontSize='20px'
-                        borderColor='rgba(31, 31, 206, 0.836)'
+                              size="md"
+                              height="62px"
+                              width="290px"
+                              border="2px"
+                              fontSize="20px"
+                              borderColor="rgba(31, 31, 206, 0.836)"
                             >
-                            Send
+                              Send
                             </Button>
                           </div>
                         </div>

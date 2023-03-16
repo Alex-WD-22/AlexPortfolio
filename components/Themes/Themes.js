@@ -1,31 +1,27 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import { ChakraProvider } from '@chakra-ui/react';
+import { ChakraProvider } from "@chakra-ui/react";
 import Button from "@chakra-ui/react";
 
 const lightTheme = createTheme({
   palette: {
-    mode: 'light',
+    mode: "light",
     primary: {
-      main: '#3f51b5',
+      main: "#3f51b5",
     },
   },
 });
 
 const darkTheme = createTheme({
   palette: {
-    mode: 'dark',
+    mode: "dark",
     primary: {
-      main: '#3f51b5',
+      main: "#3f51b5",
     },
   },
 });
 
- 
 const Themes = ({ children }) => {
-
-  
-
   const [theme, setTheme] = useState(lightTheme);
 
   const toggleTheme = () => {
@@ -34,9 +30,9 @@ const Themes = ({ children }) => {
 
   return (
     <ThemeProvider theme={theme}>
-    <ChakraProvider>
-      {children}
-      <Button onClick={toggleTheme}>Toggle Theme</Button>
+      <ChakraProvider>
+        {children}
+        <Button onClick={toggleTheme}>Toggle Theme</Button>
       </ChakraProvider>
     </ThemeProvider>
   );

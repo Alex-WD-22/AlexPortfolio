@@ -1,16 +1,16 @@
 .header {
-    width: 100%;
-    position: sticky;
-    top: 0;
-    text-transform: uppercase;
-    z-index: 1000;
-    box-shadow: 0 10px 100px rgb(0 0 0 / 10%); 
-    background: var(--background);
-  }
+  width: 100%;
+  position: sticky;
+  top: 0;
+  text-transform: uppercase;
+  z-index: 1000;
+  box-shadow: 0 10px 100px rgb(0 0 0 / 10%);
+  background: var(--background);
+}
 
-  .header_content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 52px;
-  }
+.header_content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 52px;
+}
