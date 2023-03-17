@@ -132,7 +132,7 @@ function Contact() {
                               <Input
                                 fontSize="19px"
                                 size="lg"
-                                Variant="Filled"
+                                variant="outline"
                                 placeholder="Email"
                                 label="Email"
                                 required

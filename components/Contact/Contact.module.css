@@ -4,7 +4,7 @@
   position: fixed;
   top: 50%;
   left: 0%;
-  max-width: 1100px;
+  max-width: 55%;
   margin: auto;
   height: fit-content;
   min-height: 60%;
@@ -66,7 +66,7 @@
     width: 100%;
   }
   .drawerContent {
-    max-width: 98%;
+    max-width: 99%;
     padding: 0px;
   }
 }

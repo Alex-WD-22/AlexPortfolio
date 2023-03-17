@@ -1,4 +1,4 @@
-:root {
+[data-theme="light"] {
   --background: white;
   --foreground: #000;
   --img-background: linear-gradient(

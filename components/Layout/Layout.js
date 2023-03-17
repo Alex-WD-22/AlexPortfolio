@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Footer from "../Layout/Footer";
 import Style from "../Layout/Layout.module.css";
 import Menu from "@mui/icons-material/Menu";
@@ -10,8 +10,19 @@ import { MoonIcon, SunIcon } from "@chakra-ui/icons";
 
 export function NavBar({}) {
   const [click, setClick] = useState(false);
+  const menuRef = useRef(null);
+
   const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+
+  const closeMobileMenu = (id) => {
+    setClick(false);
+    if (id) {
+      const section = document.getElementById(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
 
   const { theme, setTheme } = useTheme();
   const [isLightMode, setIsLightMode] = useState(true);
@@ -24,33 +35,51 @@ export function NavBar({}) {
     }
   }, [theme]);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        closeMobileMenu();
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   function handleToggleTheme() {
     if (isLightMode) {
       setTheme("dark");
     } else {
       setTheme("light");
     }
+    closeMobileMenu();
   }
 
   return (
     <>
       <header className={Style.header}>
         <div className={Style.header_content}>
-          <Link href="#">{"Alexander Nerz"}</Link>
+          <Link href="/">{"Alexander Nerz"}</Link>
           <div className="">
             <nav>
-              <ul className={click ? "nav-options active" : "nav-options"}>
-                <li onClick={closeMobileMenu}>
+              <ul
+                ref={menuRef}
+                className={click ? "nav-options active" : "nav-options"}
+              >
+                <li onClick={() => closeMobileMenu("About")}>
                   <Link href="/#About">
                     <span>About</span>
                   </Link>
                 </li>
-                <li onClick={closeMobileMenu}>
+                <li onClick={() => closeMobileMenu("Projects")}>
                   <Link href="/#Projects">
                     <span>Projects</span>
                   </Link>
                 </li>
-                <li onClick={closeMobileMenu}>
+                <li onClick={() => closeMobileMenu("Contact")}>
                   <Link href="/#Contact">
                     <span>Contact</span>
                   </Link>
