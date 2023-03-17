@@ -6,7 +6,7 @@ import { ChakraProvider } from "@chakra-ui/react";
 
 export default function App({ Component, pageProps }) {
   return (
-    <ThemeProvider>
+    <ThemeProvider attribute="data-theme" defaultTheme="light">
       <ChakraProvider>
         <Layout>
           <Component {...pageProps} />

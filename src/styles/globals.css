@@ -59,13 +59,7 @@ p {
   color: var(--p-header);
 }
 
-body::-webkit-scrollbar {
-  display: none;
-}
 
-html {
-  scroll-behavior: smooth;
-}
 
 html body {
   font-family: "Source Sans Pro", sans-serif;

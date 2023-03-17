@@ -1,4 +1,5 @@
 import { GitHub, LinkedIn, LocalPostOffice } from "@mui/icons-material";
+import Link from "next/link";
 
 function Footer() {
   return (
@@ -7,7 +8,7 @@ function Footer() {
         <div className="footer-section">
           <div className="flex-row space-between flex-wrap">
             <div>
-              <h5>Alexander Nerz</h5>
+              <Link href="/"><h5>Alexander Nerz</h5></Link>
               <div className="spacer-small"></div>
               <p>
                 Frontend-focused Web Developer: <br /> Crafting Impactful
