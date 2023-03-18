@@ -8,12 +8,15 @@ function Footer() {
         <div className="footer-section">
           <div className="flex-row space-between flex-wrap">
             <div>
-              <Link href="/"><h5>Alexander Nerz</h5></Link>
+              <Link href="/">
+                <h5>Alexander Nerz</h5>
+              </Link>
               <div className="spacer-small"></div>
               <p>
-                Frontend-focused Web Developer: <br /> Crafting Impactful
-                Websites & Applications for a Better User Experience
+                A frontend-focused web developer: <br /> crafting impactful
+                websites & applications for a better user experience
               </p>
+              <div className="spacer-small"></div>
             </div>
             <div>
               <h5>Social</h5>
@@ -43,7 +46,6 @@ function Footer() {
               </span>
             </div>
           </div>
-          <div className="spacer-small border-bottom"></div>
           <div className="spacer-small"></div>
           <div className="flex-center">
             <h6>

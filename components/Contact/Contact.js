@@ -73,7 +73,7 @@ function Contact() {
       <div className="main-Container">
         <div className="section-Content About-Section">
           <div className="flex-center">
-            <h4>Get in Touch</h4>
+            <h4>GET IN TOUCH</h4>
             <div className="spacer-small"></div>
             <span className="design-heading"></span>
             <div className="spacer-medium"></div>

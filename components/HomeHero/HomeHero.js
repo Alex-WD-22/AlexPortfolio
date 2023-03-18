@@ -43,8 +43,8 @@ function HomeHero() {
           <div className="spacer-small"></div>
           <p>
             {" "}
-            A Frontend-focused Web Developer: Crafting Impactful Websites &
-            Applications for a Better User Experience
+            A frontend-focused web developer: crafting impactful websites &
+            applications for a better user experience
           </p>
           <div className="spacer-medium"></div>
           <div>

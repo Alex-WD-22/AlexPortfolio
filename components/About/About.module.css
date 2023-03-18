@@ -1,14 +1,10 @@
 .Imgbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 60px;
+  padding: 69px 50px;
 }
 
 .meImg {
   position: relative;
   border-radius: 1px;
-
   filter: grayscale(100%) contrast(1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   z-index: 1;
@@ -26,6 +22,7 @@
   mix-blend-mode: screen;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
+
 .meImg:after {
   content: "";
   position: absolute;
@@ -75,3 +72,4 @@
 .imgWrapper:hover::before {
   transform: translate(10px, 10px);
 }
+
