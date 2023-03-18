@@ -15,10 +15,9 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: auto;
   height: 100%;
   border-radius: 1px;
-  background-color: navy;
   mix-blend-mode: screen;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
@@ -60,16 +59,23 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 300px;
   height: 100%;
   z-index: -1;
   box-sizing: border-box;
   border: 3px solid var(--foreground);
   transform: translate(19px, 19px);
   transition: transform 150ms;
+  
 }
 
 .imgWrapper:hover::before {
   transform: translate(10px, 10px);
 }
 
+@media  screen and (max-width: 1060px) {
+  .Imgbox {
+    padding: 30px 0px;
+  }
+  
+}

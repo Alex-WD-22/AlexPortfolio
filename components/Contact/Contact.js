@@ -16,7 +16,7 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer, Box } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Input, FormLabel, Textarea, CSSReset, Stack } from "@chakra-ui/react";
+import { Input, FormLabel, Textarea, Stack } from "@chakra-ui/react";
 
 function Contact() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -93,7 +93,7 @@ function Contact() {
             >
               Contact
             </Button>
-            <Drawer onClose={onClose} isOpen={isOpen} size="xs" color="black">
+            <Drawer onClose={onClose} isOpen={isOpen} size="xl">
               <DrawerOverlay />
               <DrawerContent className={styles.drawerContent}>
                 <DrawerCloseButton
