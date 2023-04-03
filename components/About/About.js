@@ -23,7 +23,7 @@ function About() {
                 Welcome to my landing page! My name is <strong>Alex</strong>,
                 and I'm a<strong> passionate Web Developer</strong> who dove
                 headfirst into the world of coding in{" "}
-                <strong>January 2021</strong>. After completing an intensive{" "}
+                <strong>January 2022</strong>. After completing an intensive{" "}
                 <strong>Web Development Bootcamp</strong> at{" "}
                 <a
                   href="https://ironhack.com"
