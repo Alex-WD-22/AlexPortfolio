@@ -49,7 +49,7 @@ function Footer() {
           <div className="spacer-small"></div>
           <div className="flex-center">
             <h6>
-              © {new Date().getFullYear()}. Made by{" "}
+              © {new Date().getFullYear()}. Made with 💙 by{" "}
               <a className="underline" href="https://anerz.com">
                 Alexander Nerz
               </a>
