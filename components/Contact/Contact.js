@@ -23,7 +23,6 @@ function Contact() {
   const { register, handleSubmit } = useForm({});
 
   const onSubmit = (data, e) => {
-    e.preventDefault();
     sendEmail(data);
   };
 
