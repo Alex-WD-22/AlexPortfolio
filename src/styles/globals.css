@@ -89,10 +89,10 @@ body Button {
   text-decoration: none;
 }
 
-body button:hover {
+/* body button:hover {
   transform: translateY(-5px);
   transition: all 0.3s ease-in;
-}
+} */
 
 .spacer-small {
   width: 100%;
